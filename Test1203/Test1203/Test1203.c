@@ -1,7 +1,21 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+int main()
+{
+	return 0;
+}
+
+
+
+//int main()
+//{
+//	int i = 0;
+//	int k = 0;
+//	for (i = 0, k = 0; k = 0; i++, k++)
+//		k++;
+//	return 0;
+//}
 
 //int main()
 //{
