@@ -1,19 +1,19 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 //优化1-10阶乘的和
-int main()
-{
-	int i = 1;
-	int sum = 1;
-	int max = 0;
-	for (i = 1; i <= 10; i++)
-	{
-		sum = sum * i;
-		max = max + sum;
-	}
-		printf("%d\n", max);
-	return 0;
-}
+//int main()
+//{
+//	int i = 1;
+//	int sum = 1;
+//	int max = 0;
+//	for (i = 1; i <= 10; i++)
+//	{
+//		sum = sum * i;
+//		max = max + sum;
+//	}
+//		printf("%d\n", max);
+//	return 0;
+//}
 
 
 // 1-10阶乘的和
