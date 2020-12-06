@@ -4,51 +4,51 @@
 #include<windows.h>
 #include<stdlib.h>
 
-void menu()
-{
-	printf("*********************************************\n");
-	printf("*******  1.play         0.exit        *******\n");
-	printf("*********************************************\n");
-}
-
-void game()
-{
-	//拿时间戳来设置随机数的生成起点
-	int a = rand()%100+1;
-	int b = 0;
-	printf("%d\n",a);
-	scanf("%d",&b);
-	if (a == b)
-		printf("猜对啦\n");
-	else if (a > b)
-		printf("小了\n");
-	else
-		printf("大了\n");
-}
-int main()
-{
-	srand((unsigned int) time(NULL));
-	int input = 0;
-	do
-	{
-		menu();
-		printf("请选择>:");
-		scanf("%d",&input);
-		switch (input)
-		{
-		case 1:
-			game();
-			break;
-		case 0:
-			printf("退出游戏\n");
-			break;
-		default:
-			printf("选择错误\n");
-			break;
-		}
-	} while (input);
-	return 0;
-}
+//void menu()
+//{
+//	printf("*********************************************\n");
+//	printf("*******  1.play         0.exit        *******\n");
+//	printf("*********************************************\n");
+//}
+//
+//void game()
+//{
+//	//拿时间戳来设置随机数的生成起点
+//	int a = rand()%100+1;
+//	int b = 0;
+//	printf("%d\n",a);
+//	scanf("%d",&b);
+//	if (a == b)
+//		printf("猜对啦\n");
+//	else if (a > b)
+//		printf("小了\n");
+//	else
+//		printf("大了\n");
+//}
+//int main()
+//{
+//	srand((unsigned int) time(NULL));
+//	int input = 0;
+//	do
+//	{
+//		menu();
+//		printf("请选择>:");
+//		scanf("%d",&input);
+//		switch (input)
+//		{
+//		case 1:
+//			game();
+//			break;
+//		case 0:
+//			printf("退出游戏\n");
+//			break;
+//		default:
+//			printf("选择错误\n");
+//			break;
+//		}
+//	} while (input);
+//	return 0;
+//}
 
 
 
