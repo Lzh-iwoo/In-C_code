@@ -4,23 +4,23 @@
 #include<windows.h>
 #include<stdlib.h>
 //通过指针来解决函数内部参数内存不同
-void exchange(int* x , int* y)
-{
-	int tmp = 0;
-	tmp = *x;
-	*x = *y;
-	*y = tmp;
-}
-
-int main()
-{
-	int a = 0;
-	int b = 0;
-	scanf("%d%d", &a, &b);
-	exchange(&a,&b);
-	printf("%d%d", a,b);
-	return 0;
-}
+//void exchange(int* x , int* y)
+//{
+//	int tmp = 0;
+//	tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//}
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d%d", &a, &b);
+//	exchange(&a,&b);
+//	printf("%d%d", a,b);
+//	return 0;
+//}
 
 
 //int inmax(int a , int b)
