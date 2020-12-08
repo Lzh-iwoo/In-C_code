@@ -1,21 +1,19 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<string.h>
-#include<windows.h>
-#include<stdlib.h>
-#include "add.h"
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<string.h>
+//#include<windows.h>
+//#include<stdlib.h>
+//#include "add.h"
 
 
-
-
-int main()
-{
-	int x = 10;
-	int y = 20;
-	int sum = Add(x, y);
-	printf("%d\n",sum);
-	return 0;
-}
+//int main()
+//{
+//	int x = 10;
+//	int y = 20;
+//	int sum = Add(x, y);
+//	printf("%d\n",sum);
+//	return 0;
+//}
 
 //int binary_search(int arr[],int k,int size)
 //{
