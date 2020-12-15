@@ -68,9 +68,9 @@
 //}
 
 
-int main()
-{
-	int* p;  
-	return 0;
-}
-
+//int main()
+//{
+//	int* p;  
+//	return 0;
+//}
+//
