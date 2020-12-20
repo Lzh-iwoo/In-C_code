@@ -1,5 +1,5 @@
 //#define N_VALUES 5
-
+#define  _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 
 //int my_strlen(char* x)
@@ -101,24 +101,97 @@
 //	return 0;
 //}
 
-void forword(int a[],int b[],int sz)
+//void forword(int a[],int b[],int sz)
+//{
+//	int i = 0;
+//	for ( i = 0 ; i < sz ; i++ )
+//	{
+//		int tmp = a[i];
+//		a[i] = b[i];
+//	}
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d\n",b[i]);
+//	}
+//}
+//
+//int main()
+//{
+//	int a[5] = { 1,2,3,4,5 };
+//	int b[5] = { 6,5,4,3,2 };
+//	int sz = sizeof(a) / sizeof(a[0]);
+//	forword(a,b,sz);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int x, y, z;
+//	x = y = 1;
+//	z = x++, y++, ++y;
+//		printf("%d,%d,%d\n",x,y,z);
+//	return 0;
+//}
+
+//int count_bit_one(int a)
+//{
+//	int count = 0;
+//	int i = 0;
+//	for ( i = 0 ; i < 32 ; i++  ) 
+//	{
+//		if ((( a >> i) & 1 )== 1)
+//		{
+//			count++;
+//		}
+//	}
+//	return a;
+//}
+//
+
+
+//int count_bit_one(int a)
+//{
+//	int count = 0;
+//	while (a)
+//	{
+//		a = a & (a - 1);
+//		count++;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d",&a);
+//	int count = count_bit_one(a);
+//	printf("%d",count);
+//	return 0;
+//}
+
+//计算两个整数在32位内有多少个的bit位不同
+int  another(int m, int n)
 {
+	int x = m ^ n;//按位异或 (二进制位不同返回1 相同返回0)
 	int i = 0;
-	for ( i = 0 ; i < sz ; i++ )
+	int count = 0;
+	for (i = 0 ; i < 32 ;i++)
 	{
-		int tmp = a[i];
-		a[i] = b[i];
-
-
+		if (((x >> i)&1)==1)
+		{
+			count++;
+		}
 	}
-
+	return count;
 }
 
 int main()
 {
-	int a[10] = { 1,2,3,4,5 };
-	int b[10] = { 6,5,4,3,2 };
-	int sz = sizeof(a) / sizeof(a[0]);
-	forword(a,b,sz);
+	int m = 0;
+	int n = 0;
+	int count = 0;
+	scanf("%d %d",&m,&n);
+	count = another(m,n);
+	printf("%d\n",count);
 	return 0;
 }
