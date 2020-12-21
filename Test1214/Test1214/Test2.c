@@ -1,6 +1,7 @@
 //#define N_VALUES 5
 #define  _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
+#include<stdlib.h>
 
 //int my_strlen(char* x)
 //{
@@ -169,29 +170,51 @@
 //	return 0;
 //}
 
-//计算两个整数在32位内有多少个的bit位不同
-int  another(int m, int n)
+////计算两个整数在32位内有多少个的bit位不同
+//int  another(int m, int n)
+//{
+//	int x = m ^ n;//按位异或 (二进制位不同返回1 相同返回0)
+//	int i = 0;
+//	int count = 0;
+//	for (i = 0 ; i < 32 ;i++)
+//	{
+//		if (((x >> i)&1)==1)
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	int m = 0;
+//	int n = 0;
+//	int count = 0;
+//	scanf("%d %d",&m,&n);
+//	count = another(m,n);
+//	printf("%d\n",count);
+//	return 0;
+//}
+
+void Traverse(int a)
 {
-	int x = m ^ n;//按位异或 (二进制位不同返回1 相同返回0)
-	int i = 0;
-	int count = 0;
-	for (i = 0 ; i < 32 ;i++)
-	{
-		if (((x >> i)&1)==1)
-		{
-			count++;
-		}
+	if (a <= 9) {
+		printf("%d", a);
 	}
-	return count;
+	else {
+		int d = 0;
+		d = a % 10;
+		a /= 10;
+		Traverse(a);
+		printf("%d", d);
+	}
 }
 
 int main()
 {
-	int m = 0;
-	int n = 0;
-	int count = 0;
-	scanf("%d %d",&m,&n);
-	count = another(m,n);
-	printf("%d\n",count);
+	int a = 1234;
+	//scanf("%d",&a);
+	Traverse(a);
 	return 0;
 }
